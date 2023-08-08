@@ -4,12 +4,16 @@
   	grid-column: col-start / span 1;
 	grid-row: 1 / 1;
 	padding: 30px 0;
-
+	position: absolute;
+	z-index:3;
 	img {
 		display: block;
 	}
-}
 
+	@include  desktopExtraSmall  {
+		position: static;
+	}
+}
 .navbar {
 	grid-column: col-start 1 / -1;
   	grid-row: 1 / 1;
