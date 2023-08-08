@@ -4,7 +4,6 @@
 
 
 ## Description
-### Main Responsibilities
 
 * Site created using Webpack, SCSS, GSAP
 
