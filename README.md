@@ -32,5 +32,5 @@ npm run dev
 
 
 ## Demo
-iraand.github.io/dijital-project/
+https://iraand.github.io/dijital-project/
 
