@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+
+html {
+  font-family: $ttHoves, sans-serif;
+  font-weight: $baseFontWeight;
+  line-height: $baseLineHeight;
+  font-size: 100%;
+}
+
+// Header Styles
+h1, h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: $headingLineHeight;
+  color: $titleGray;
+  margin: 0;
+  padding: 0;
+
+  @include tablet {
+    font-size: 2.5rem;
+	}
+  @include desktopExtraSmall {
+    font-size: 3rem;
+	}
+  @include desktopSmall {
+    font-size: $headingFontSize;
+	}
+}
+
+h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-bottom: $pad;
+  line-height: $headingLineHeight;
+  color: $titleGray;
+
+  a {
+    font-weight: inherit;
+    color: $gray;
+  }
+}
+p {
+  color: $gray;
+}
+
+.title {
+  &-light {
+    font-weight: 300;
+    color: $titleGray;
+    display:block;
+  }
+
+  &-bold {
+    font-family: $ttHoves-Bold, sans-serif;
+    font-weight: 700;
+    color: $gray;
+    display:block;
+  }
+}
+
+// Text Styles
+em { font-style: italic; }
+strong { font-weight: bold; }
+.uppercase { text-transform: uppercase; }  

@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+.contacts {
+    margin-top: 120px;
+
+    h2 {
+        grid-column: col-start 1 / -1;
+        grid-row: 1 / 1;
+        margin-bottom: 30px;
+    } 
+
+    &__image {
+        grid-column: col-start 1 / -1;
+        grid-row: 3 / 3;
+
+        @include tablet {
+           grid-column: col-start 5 / -1; 
+           grid-row: 2 / 2;
+        }
+    }
+
+    #contact-form {
+        width: 100%;
+        grid-column: col-start 1 / -1;
+        @include tablet {
+           grid-column: col-start 1 / span 4;
+           grid-row: 2 / 2;
+        }
+
+        input,
+        textarea {
+            background-color: $middleGray;
+            color: #8D8D8D;
+            font-size: 14px;
+            letter-spacing: 0.56px;
+            width: 100%;
+            padding: 15px;
+            border: none;            
+            outline: none;
+        }
+        input {
+            margin-bottom: 15px;
+        }
+        textarea {
+            height: 130px;
+        }
+        &:focus {
+            outline: 1px solid $titleGray;
+        }
+        &:focus::placeholder {
+            color: transparent;
+        }
+        input:focus::-webkit-input-placeholder {
+            opacity: 0;
+        }
+        textarea:focus::-webkit-input-placeholder {
+            opacity: 0;
+        }
+        
+        p {
+            margin: 21px 20px; 
+        }
+        button {
+            margin-bottom: 30px;
+        } 
+        .checkbox {
+            display: flex;
+            align-items: center;
+            input {
+                width: 30px;
+                height: 30px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                &:focus {
+                    outline: 1px solid $titleGray;
+                }    
+                &:checked:before {
+                    content:'\2713';
+                    width:100%;
+                    height:100%;
+                    top:0;
+                    left:0;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    color:$gray;
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+}

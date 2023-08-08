@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+@font-face {
+    font-family: $ttHoves;
+    src: url('../fonts/tt-hoves/TTHoves-Regular.eot');
+    src: local('../fonts/tt-hoves/TT Hoves Regular'), local('TTHoves-Regular'),
+        url('../fonts/tt-hoves/TTHoves-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/tt-hoves/TTHoves-Regular.woff2') format('woff2'),
+        url('../fonts/tt-hoves/TTHoves-Regular.woff') format('woff'),
+        url('../fonts/tt-hoves/TTHoves-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $ttHoves-Bold;
+    src: url('../fonts/tt-hoves/TTHoves-Bold.eot');
+    src: local('../fonts/tt-hoves/TT Hoves Bold'), local('TTHoves-Bold'),
+        url('../fonts/tt-hoves/TTHoves-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/tt-hoves/TTHoves-Bold.woff2') format('woff2'),
+        url('../fonts/tt-hoves/TTHoves-Bold.woff') format('woff'),
+        url('../fonts/tt-hoves/TTHoves-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $SFProDisplay;
+    src: url('../fonts/sfProDisplay/SFProDisplay-Black.eot');
+    src: local('../fonts/sfProDisplay/SFProDisplay-Black'), local('TTHoves-Bold'),
+        url('../fonts/sfProDisplay/SFProDisplay-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/sfProDisplay/SFProDisplay-Black.woff2') format('woff2'),
+        url('../fonts/sfProDisplay/SFProDisplay-Black.woff') format('woff'),
+        url('../fonts/sfProDisplay/SFProDisplay-Black.ttf') format('truetype');    
+    font-weight: 900;
+    font-style: normal;
+}

@@ -1,0 +1,117 @@
+@use "../abstracts" as *;
+
+.slider-section {   
+
+    .wrapper {
+        position: relative; 
+        width: 100%;
+    }
+    .container {
+        grid-column: col-start 1 / -1;
+        grid-row: 1 / 1;
+        width: 100%;
+
+        @include  tablet {
+            grid-column: col-start 1 / span 4;
+            grid-row: 1 / 3;
+            align-self: end;
+            display: flex;
+            flex-direction: column;
+            gap: 5.625rem;
+            margin-bottom: 6.5rem;
+        }        
+    }
+    .title {
+        margin-bottom: 2rem;
+        @include  tablet {
+            margin-bottom: 0;
+        }
+    }
+    .slider {
+        grid-column: col-start 1 / -1;
+        grid-row: 2 / 2;
+        width: 100%;
+
+        @include  tablet  {
+            grid-column: col-start 5 / -1;
+            grid-row: 1 / 1;
+            width: 100%;
+        }
+
+        &-item {          
+            width:100%;
+            height:100%;
+            background-image: url("../images/slider/slide1-@2x.jpg");
+            background-position: top;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            max-width:772px;
+        }
+    }
+    
+    .slider-navigation {
+        display: flex;
+        position: absolute;
+        left:2rem;
+        right:2rem;
+        top: 50%;
+        z-index: 2;
+        width: calc(100% - 4rem);
+
+        @include  tablet {
+            position: static;
+            align-items: center;
+            z-index: 0;
+            width: 100%;
+        }
+
+        .button__next {
+            margin-left: 0;
+            position: absolute;
+            right: 0;
+
+            @include  tablet{
+                margin-left: 23px;
+                position: static;
+            }
+        }
+
+        .line {
+            width:110%;
+            height:1px;
+            background: $borderGray;
+            left: 129px;
+            display: none;
+            margin-right: -10%;
+
+            @include tablet {
+                display: block;
+            }
+        }
+    } 
+    
+    .slide-numbers {
+        font-size: 20px;
+        color: $titleGray;
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        bottom: -2rem;
+        right: 2rem;
+
+        @include  tablet {
+            font-size: 24px;
+            gap: 1.4em;
+            position: static;
+        }
+
+        .number-line {
+            height: 1.5em;
+            border-left: solid 2px #E0E0E0;
+            transform: rotate(40deg);
+        }
+    }   
+}

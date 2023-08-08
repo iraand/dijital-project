@@ -1,0 +1,31 @@
+//Fonts
+$ttHoves         : 'TTHoves-Regular';
+$ttHoves-Bold    : 'TTHoves-DemiBold';
+$SFProDisplay    : 'SFProDisplay-Black';
+
+// Font Sizing
+$baseFontSize       : 16px;
+$headingFontSize    : 64px;
+$baseFontWeight     : 400;
+$headingFontWeight  : 700;
+$baseLineHeight     : 1.5;
+$headingLineHeight  : 1;
+
+// Colors
+$gray       : #333333;
+$grayDark   : #1f1e1e;
+$gray08 	: rgba(51, 51, 51, .8);
+$titleGray  : #BDBDBD;
+$borderGray : #F2F2F2;
+$middleGray : #F3F3F3;
+$lightGray  : #FBFBFB;
+
+// Spacing
+$pad : 1em;
+
+// Breakpoints
+$tablet             : 768px;
+$desktopExtraSmall  : 1024px;
+$desktopSmall       : 1440px;
+$desktop            : 1680px;
+$desktopLarge       : 1980px;

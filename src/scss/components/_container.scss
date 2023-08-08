@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+
+// .container {
+//   display: grid;
+//   grid-template-columns: repeat(12, [col-start] 1fr);
+//   column-gap: 20px;
+//   margin: 0 auto;
+// }
+
+// .container > * {
+//   grid-column: col-start / span 12;
+// }
+
+
+// .container {
+// 	width: 100%;
+// 	height: auto;
+  
+//   margin: 0 auto;
+//   padding: 0 2rem;
+
+//   @include  desktopSmall {
+//       padding: 0;
+//   }
+// }

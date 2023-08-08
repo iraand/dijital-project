@@ -1,0 +1,196 @@
+@use "../abstracts" as *;
+
+.projects {
+    margin-top: 120px;
+    
+
+    .wrapper {
+        row-gap: 30px;
+        position: relative;
+    }
+
+    h2 {
+        grid-column: col-start 1 / -1;
+        grid-row: 1 / 1;
+        margin-bottom: 30px;
+    } 
+    .project {
+        position: relative;
+        transition: all 0.6s ease;
+        overflow: hidden;
+        grid-column: col-start 1 / -1;
+        overflow: hidden;
+        
+    }
+    .project1 {
+        grid-row: 2 / 2;
+
+        @include  tablet {
+            grid-column: col-start 1 / span 6;
+            grid-row: 2 / 2;
+        }
+    }
+    .project2 {
+        grid-row: 3 / 3;
+        
+        @include  tablet {
+            grid-column: col-start 7 / -1;
+            grid-row: 2 / 2; 
+        }           
+    }
+    .project3 {
+        grid-row: 4 / 4;
+        @include  tablet {
+            grid-column: col-start 1 / span 3;
+            grid-row: 3 / 3; 
+        }
+        .project__title {
+            font-size: 0.5em;
+
+            @include  tablet {
+                font-size: 0.45em;
+            } 
+            @include  desktopExtraSmall {
+                font-size: 0.4em;
+            }           
+            @include desktopSmall   {
+                font-size: 0.5em;
+            }
+        }
+    }  
+    .project4 {
+        grid-row: 5 / 5;
+        @include  tablet {
+            grid-column: col-start 4 / span 5;
+            grid-row: 3 / 3; 
+        }           
+    } 
+    .project5 {
+        grid-row: 6 / 6;
+        @include  tablet {
+            grid-column: col-start 9 / -1;
+            grid-row: 3 / 3; 
+        } 
+        .project__title {
+            font-size: 0.5em;
+
+            @include  desktopExtraSmall {
+                font-size: 0.6em;
+            }           
+            @include desktopSmall   {
+                font-size: 0.6em;
+            }
+        }               
+    } 
+    
+    .project__cover {
+        background-color: $gray08;
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        bottom: 0;
+        left: 0;
+        visibility: visible;
+        opacity:1;
+        overflow: hidden;    
+        transition: all 0.6s ease;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include  tablet {
+            background-color: transparent;
+            height: 100%;
+            visibility: hidden;
+            opacity:0;
+        }         
+
+        & .project__button {
+            width: 129px;
+            @include  tablet {
+                width: 222px;
+            }  
+        } 
+    }
+    .project__title {
+        color: #FFF;
+        font-family: $ttHoves-Bold;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 14px;
+        font-size: 0.5em;
+        line-height: 1;
+        @include  tablet {
+            font-size: 0.6em;
+        }
+    }    
+
+    .project__button {
+        background-color: transparent;
+        padding: 0;
+        display: inline-flex;
+    } 
+
+    .project__cover__wrapper {
+        font-size: 36px;
+        line-height: 0.1;
+        width: 80%;
+        margin: 0 auto;
+        @include  tablet {
+            font-size: 45px;
+        }        
+        @include  desktopExtraSmall {
+            font-size: 55px;
+        }
+        @include  desktopSmall {
+            font-size: 64px;
+        }
+    }
+
+    .project:hover {
+        cursor: pointer;
+        transition: all 0.6s ease;
+        
+        & .project__cover {
+            background-color: $gray08;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        & .project__button {
+            background-color: transparent;
+            color: $titleGray;
+            padding-top: 10px;
+            margin: 0;
+            width: 129px;
+        } 
+        & .project__button:before {
+            background-color: transparent;
+            content: none;
+        } 
+        img {
+            animation: 2s linear .2s alternate forwards scale;   
+        }
+    }
+    
+    .button__wrapper {
+        grid-row: 7 / 7;
+        grid-column: col-start 1 / -1;      
+        display: flex;
+        justify-content: flex-end;
+        @include  tablet {       
+            grid-row: 4 / 4; 
+        } 
+    }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1); 
+  }
+  to {
+    transform: scale(1.2);  
+  }
+}
