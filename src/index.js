@@ -1,5 +1,6 @@
 import "./scss/style.scss";
 import { animate } from "./js/animate.js"
+import { slider } from "./js/slider.js"
 import { toggleBurgerMenu } from "./js/toggleBurgerMenu.js";
 
 window.addEventListener("load", onLoadFunction);
@@ -8,6 +9,7 @@ function onLoadFunction(e) {
     e.preventDefault();
 
     animate();
+    slider();
     onResizeFunction(); 
 
     window.addEventListener("resize", onResizeFunction);

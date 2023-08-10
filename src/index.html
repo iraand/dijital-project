@@ -40,20 +40,33 @@
           </h1>
           <div class="slider-navigation">
             <button class="button button__slider-navigation light button__prev"></button>
-            <button class="button button__slider-navigation light button__next active"></button> 
+            <button class="button button__slider-navigation light button__next"></button> 
             <div class="line"></div>  
           </div>
           <div class="slide-numbers">
-              <span>01</span><span class="number-line"></span><span>02</span>
+              <span class="slide-number">01</span><span class="number-line"></span><span>03</span>
           </div>
         </div>
-        <div class="slider" id="slider">
-          <div class="slider-item">
+        <swiper-container class="slider" id="slider" slides-per-view="1" speed="500">
+          <swiper-slide class="slider-item">
+            Slide 1
             <button class="button button__main light absolute">
               <span>Взглянуть</span>
             </button>
-          </div>         
-        </div>
+          </swiper-slide>
+          <swiper-slide class="slider-item">
+            Slide 2
+            <button class="button button__main light absolute">
+              <span>Взглянуть</span>
+            </button>
+          </swiper-slide>
+          <swiper-slide class="slider-item">
+            Slide 3
+            <button class="button button__main light absolute">
+              <span>Взглянуть</span>
+            </button>
+          </swiper-slide>
+        </swiper-container>
       </div>
     </section>
     <section class="about-section">

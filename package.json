@@ -50,6 +50,7 @@
   "dependencies": {
     "bourbon": "^7.3.0",
     "gsap": "^3.12.2",
-    "neat": "^2.1.0"
+    "neat": "^2.1.0",
+    "swiper": "^10.1.0"
   }
 }
