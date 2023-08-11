@@ -19422,13 +19422,25 @@ var slider = function slider() {
   var swiper = document.querySelector("swiper-container").swiper;
   var buttonNextEl = document.querySelector(".button__next");
   var buttonPrevEl = document.querySelector(".button__prev");
+  var setActiveButton = function setActiveButton(index) {
+    buttonNextEl.classList.add("active");
+    buttonPrevEl.classList.add("active");
+    console.log(Number(index));
+    if (Number(index) === 0) {
+      buttonPrevEl.classList.remove("active");
+    }
+    if (Number(index) === 2) {
+      buttonNextEl.classList.remove("active");
+    }
+  };
   var setActiveSlid = function setActiveSlid() {
-    console.log(swiper.activeIndex);
     var slideNumber = document.querySelector(".slide-number");
     var span = "0".concat(swiper.activeIndex + 1);
     slideNumber.innerHTML = span;
+    setActiveButton(swiper.activeIndex);
     return swiper.activeIndex + 1;
   };
+  setActiveButton(0);
   setActiveSlid();
   buttonNextEl.addEventListener("click", function () {
     swiper.slideNext();
