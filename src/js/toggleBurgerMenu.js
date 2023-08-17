@@ -7,6 +7,7 @@ export const toggleBurgerMenu = () => {
   burgerMenu.classList.toggle("is-active");
   navbarMenu.classList.toggle("is-active");
 
+  console.log("click")
   if (navbarMenu.classList.contains("is-active")) {
    navbarMenu.style.maxHeight = navbarMenu.scrollHeight + "px";
   } else {

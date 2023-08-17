@@ -11,13 +11,13 @@ function onLoadFunction(e) {
     animate();
     slider();
     onResizeFunction(); 
+    toggleBurgerMenu();
 
     window.addEventListener("resize", onResizeFunction);
 }
 
 function onResizeFunction() {   
     calculateSliderHeight();
-    toggleBurgerMenu();
 }
 
 function calculateSliderHeight () {
