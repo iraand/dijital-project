@@ -19463,6 +19463,7 @@ var toggleBurgerMenu = function toggleBurgerMenu() {
   burgerMenu.addEventListener("click", function () {
     burgerMenu.classList.toggle("is-active");
     navbarMenu.classList.toggle("is-active");
+    console.log("click");
     if (navbarMenu.classList.contains("is-active")) {
       navbarMenu.style.maxHeight = navbarMenu.scrollHeight + "px";
     } else {
@@ -19481,11 +19482,11 @@ function onLoadFunction(e) {
   animate();
   slider();
   onResizeFunction();
+  toggleBurgerMenu();
   window.addEventListener("resize", onResizeFunction);
 }
 function onResizeFunction() {
   calculateSliderHeight();
-  toggleBurgerMenu();
 }
 function calculateSliderHeight() {
   var slider = document.getElementById("slider");
